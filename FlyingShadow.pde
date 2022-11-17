@@ -4,7 +4,7 @@ class FlyingShadow extends scene {
   PImage img;
 
   int minDepth =  100;
-  int maxDepth = 1030;
+  int maxDepth = 1020;
 
   int colorScheme;
 

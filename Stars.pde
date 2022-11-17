@@ -2,7 +2,7 @@ class Stars extends scene {
   int[] starX = new int[1000];
   int[] starY = new int[1000];
   color[] starColor = new color[1000];
-  int starSize = 3; // the size of the twinkling stars
+  int starSize = 6; // the size of the twinkling stars
   float t = 255;
   boolean toFadeIn = true;
 
@@ -29,12 +29,12 @@ class Stars extends scene {
     }
   }
   void medraw() {
-    background(0, 0, 50); // dark blue night sky
+    background(0, 0, 0); // dark blue night sky
 
     // draw the stars
     // the stars seem to show best with black outlines that aren't really perceived by the eye
     stroke(0);
-    strokeWeight(1);
+    strokeWeight(0.1);
     for (int i = 0; i < starX.length; i++) {
       fill(random(50, 255)); // makes them twinkle
       if (random(10) < 1) {
