@@ -43,12 +43,19 @@ void keyPressed() {
 }
 
 void mouseClicked() {
-  place ++;
+  if (mouseX>width/2) {
+    place ++;
+  } else {
+    place--;
+  }
   if (place == 8) {
     scene9.mesetup();
   }
   background(0);
   if (place>=scenes.size()) {
+    place = 1;
+  }
+  if (place<0) {
     place = 0;
   }
 }
